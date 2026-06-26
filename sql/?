@@ -1,0 +1,12 @@
+        echo: off
+         eqp: off
+     explain: auto
+     headers: on
+        mode: box --wrap 60 --wordwrap off --noquote
+   nullvalue: ""
+      output: ?
+colseparator: "|"
+rowseparator: "\n"
+       stats: off
+       width: 0 0 0 0 0 0 
+    filename: agenda.sqlite

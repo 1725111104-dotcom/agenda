@@ -2,7 +2,7 @@ import web
 
 urls = (
     '/', 'Index',
-    '/lista_contactos', 'ListaContactos',
+    '/lista_contactos', 'controllers.lista_contactos.ListaContactos',
     '/insertar_contacto', 'InsertarContacto',
     '/ver_contacto', 'VerContacto',
     '/editar_contacto', 'EditarContacto',
