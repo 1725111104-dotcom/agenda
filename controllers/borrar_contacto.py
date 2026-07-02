@@ -3,9 +3,9 @@ import sqlite3
 
 render = web.template.render('views', base='layout')
 
-class VerContacto:
+class BorrarContacto:
 
-    def buscarContacto(self, id_contacto:int):
+    def borrarContacto(self, id_contacto:int):
         try:
             conexion = sqlite3.connect("sql/agenda.sqlite")
             conexion.row_factory = sqlite3.Row
@@ -34,5 +34,5 @@ class VerContacto:
 
     def GET(self,id_contacto:int):
         print(f"ID_CONTACTO: {id_contacto}")
-        contacto = self.buscarContacto(id_contacto)
-        return render.ver_contacto(contacto)
+        contacto = self.borrarContacto(id_contacto)
+        return render.borrar_contacto(contacto)

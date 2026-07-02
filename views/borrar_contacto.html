@@ -1,42 +1,24 @@
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-        <title>Agenda</title>
-    </head>
-    <body>
-        <h1>Borrar Contacto</h1>
-<label>ID</label>
-<input type="text" readonly>
+$def with(contacto)
 
-<br><br>
+<form method="POST">
+    <label for="id_contacto">ID de Contacto:</label>
+    <input type="text" id = "id_contacto" name="id_contacto" value="$contacto['id_contacto']"><br><br>
 
-<label>Nombre</label>
-<input type="text" readonly>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id = "nombre" name="nombre" value="$contacto['nombre']"><br><br>
 
-<br><br>
+    <label for="primer_apellido">Primer Apellido:</label>
+    <input type="text"  id = "primer_apellido" name="primer_apellido" value="$contacto['primer_apellido']"><br><br>
 
-<label>Primer Apellido</label>
-<input type="text" readonly>
+    <label for="segundo_apellido">Segundo Apellido:</label>
+    <input type="text" id = "segundo_apellido" name="segundo_apellido" value="$contacto['segundo_apellido']"><br><br>
 
-<br><br>
+    <label for="email">Email:</label>
+    <input type="email" id = "email" name="email" value="$contacto['email']"><br><br>
 
-<label>Segundo Apellido</label>
-<input type="text" readonly>
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id = "telefono" name="telefono" value="$contacto['telefono']"><br><br>
 
-<br><br>
-
-<label>Email</label>
-<input type="email" readonly>
-
-<br><br>
-
-<label>Teléfono</label>
-<input type="text" readonly>
-
-<br><br>
-
-<button>Borrar</button>
-</body>
-</html>
+    <a href="/lista_contactos"><button type="button">Regresar</button></a>
+    <a href="/"><button type="button">Regresar Index</button></a>
+</form>
